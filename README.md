@@ -14,6 +14,8 @@ We solve the **two-dimensional time-dependent Schrödinger equation** on a unit-
 
 Simulation data are written to file and can be analysed and visualised using the Python scripts in `scripts/`.
 
+https://github.uio.no/user-attachments/assets/2c172ae4-0f34-4fea-994d-63e4b7717327
+
 ---
 
 ## 🎯 Project Goals
