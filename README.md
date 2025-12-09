@@ -87,47 +87,26 @@ build/main <file_name_prefix> <h> <dt> <T>   <x_c> <sigma_x> <p_x>   <y_c> <sigm
 
 ### Arguments
 
-- **file_name_prefix**  
-  Prefix for output files (base name for all data written to `output/`).
-
-- **h**  
-  Spatial step size (domain is `[0,1] × [0,1]`).
-
-- **dt**  
-  Time step.
-
-- **T**  
-  Total simulation time.
-
-- **x_c**  
-  Initial wave packet center in the x-direction.
-
-- **sigma_x**  
-  Wave packet width in the x-direction.
-
-- **p_x**  
-  Initial momentum in the x-direction.
-
-- **y_c**  
-  Initial wave packet center in the y-direction.
-
-- **sigma_y**  
-  Wave packet width in the y-direction.
-
-- **p_y**  
-  Initial momentum in the y-direction.
-
-- **v0**  
-  Barrier height for the slit potential.
-
-- **n_slits**  
-  Number of slits in the barrier  
-  (e.g. `1` = single slit, `2` = double slit, `3` = triple slit).
+| Name | Description |
+|------|-------------|
+| `file_name_prefix` | Prefix for output files (base name for all data written to `output/`). |
+| `h` | Spatial step size (domain is `[0,1] × [0,1]`). |
+| `dt` | Time step. |
+| `T` | Total simulation time. |
+| `x_c` | Initial wave packet center in x-direction. |
+| `sigma_x` | Wave packet width in x-direction. |
+| `p_x` | Initial momentum in x-direction. |
+| `y_c` | Initial wave packet center in y-direction. |
+| `sigma_y` | Wave packet width in y-direction. |
+| `p_y` | Initial momentum in y-direction. |
+| `v0` | Barrier height for the slit potential. |
+| `n_slits` | Number of slits (`1` = single, `2` = double, `3` = triple). |
 
 ### Options
 
-- **--M \<int\>**  
-  Override grid size `M` (number of grid points per spatial dimension).
+| Flag | Description |
+|------|-------------|
+| `--M <int>` | Override grid size `M` (grid points per spatial dimension). |
 
 ### Example
 
@@ -178,9 +157,6 @@ python scripts/animate_double_slit.py
 ---
 
 ## TODO
-
-### Problem 2
-- Double Check Problem 2
 
 ### Refactoring / OOP
 - Encapsulate solver logic into classes
