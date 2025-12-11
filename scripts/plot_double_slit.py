@@ -15,6 +15,16 @@ dt = 2.5e-5          # Delta time
 T  = 0.002           # Time interval
 Nt = int(T / dt) + 1 # should be 81
 
+# Global Font Size
+plt.rcParams.update({
+    "font.size": 16,        # base font size
+    "axes.titlesize": 18,   # title size
+    "axes.labelsize": 16,   # x/y label size
+    "legend.fontsize": 14,  # legend text
+    "xtick.labelsize": 14,
+    "ytick.labelsize": 14
+})
+
 #
 # Get path to the input files
 #
@@ -80,14 +90,14 @@ for t, idx in zip(times, indices):
     if use_direct_scaling:
         plot_colormap(
             p / p.max(), # normalised to max=1 at each t
-            f"Probability $|u(x,y,t)|^2$ at $t={t:.3e}$",
+            f"$t={t:.3e}$",
             "Normalized $|u|^2$",
             os.path.join(folder_path, f"prob_t{t:.3f}.pdf")
         )
     else:
         plot_colormap(
             np.sqrt(p / p.max()), # normalized with sqrt to max=1 at each t
-            f"Probability $|u(x,y,t)|^2$ at $t={t:.3e}$",
+            f"$t={t:.3e}$",
             "Normalized $\sqrt{|u|^2}$",
             os.path.join(folder_path, f"prob_t{t:.3f}.pdf")
         )
@@ -98,7 +108,7 @@ for t, idx in zip(times, indices):
     
     plot_colormap(
         u.real,
-        f"Real Part of $u(x,y,t)$ at $t={t:.3e}$",
+        f"$t={t:.3e}$",
         "Re$(u)$",
         os.path.join(folder_path, f"re_u_t{t:.3f}.pdf")
     )
@@ -109,7 +119,7 @@ for t, idx in zip(times, indices):
     
     plot_colormap(
         u.imag,
-        f"Imaginary Part of $u(x,y,t)$ at $t={t:.3e}$",
+        f"$t={t:.3e}$",
         "Im$(u)$",
         os.path.join(folder_path, f"im_u_t{t:.3f}.pdf")
     )

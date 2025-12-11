@@ -17,6 +17,16 @@ if not os.path.isdir(folder_path):
 while not os.path.isdir(folder_path):
     folder_path = input("Please enter the path to the folder containing the input files: ")
 
+# Global Font Size
+plt.rcParams.update({
+    "font.size": 16,        # base font size
+    "axes.titlesize": 18,   # title size
+    "axes.labelsize": 16,   # x/y label size
+    "legend.fontsize": 14,  # legend text
+    "xtick.labelsize": 14,
+    "ytick.labelsize": 14
+})
+    
 #
 # Load data
 #

@@ -27,6 +27,16 @@ h = 1.0 / (M - 1)                   # consistent with C++ grid
 i_screen = int(round(x_screen / h)) # should be 160 for M=201
 n_t = int(round(t_target / dt))     # should be 80 for dt=2.5e-5
 
+# Global Font Size
+plt.rcParams.update({
+    "font.size": 16,        # base font size
+    "axes.titlesize": 18,   # title size
+    "axes.labelsize": 16,   # x/y label size
+    "legend.fontsize": 14,  # legend text
+    "xtick.labelsize": 14,
+    "ytick.labelsize": 14
+})
+
 #
 # Get path to the input files
 #
