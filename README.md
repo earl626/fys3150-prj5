@@ -39,7 +39,8 @@ https://github.uio.no/user-attachments/assets/2c172ae4-0f34-4fea-994d-63e4b77173
 ├── README.md                          # Project Documentation (this file)
 ├── build/                             # Compiled executables
 ├── include/                           # C++ headers (interfaces)
-│   └── utils.hpp                      # Utility function declerations
+│   └── utils.hpp                      # Utility function declarations
+│   └── solver.hpp                     # Solver function declarations
 ├── output/                            # Generated Results and Plots go here
 ├── scripts/                           # Scripts for Animation and Plotting
 │   ├── animate_double_slit.py         # Creates animations of the slit experiment time evolution
@@ -48,6 +49,7 @@ https://github.uio.no/user-attachments/assets/2c172ae4-0f34-4fea-994d-63e4b77173
 │   └── plot_probability_deviation.py  # Plots Probability Deviation over time
 └── src/                               # Source code for the simulation
     ├── main.cpp                       # Main program: argument parsing, setup, time stepping and data generation
+    ├── solver.cpp                     # Implementations of solver functions for potentials, wavepackets, CN matrices, etc.
     └── utils.cpp                      # Utility function implementations
 ```
 

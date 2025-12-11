@@ -13,6 +13,6 @@ INCLUDE = -I include -larmadillo
 $(DIRS):
 	mkdir -p $@
 
-SRC_MAIN = $(SRC_DIR)/main.cpp $(SRC_DIR)/utils.cpp
+SRC_MAIN = $(SRC_DIR)/main.cpp $(SRC_DIR)/utils.cpp $(SRC_DIR)/solver.cpp
 main: $(DIRS) $(SRC_MAIN)
 	$(CXX) $(FLAGS) $(SRC_MAIN) -o $(BUILD_DIR)/main $(INCLUDE)
